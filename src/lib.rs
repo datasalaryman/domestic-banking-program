@@ -14,8 +14,13 @@ mod domestic_banking_program {
     use super::*;
 
     #[instruction]
-    pub fn initialize(ctx: Ctx<Initialize>) -> Result<(), ProgramError> {
-        ctx.accounts.initialize()
+    pub fn initialize(ctx: Ctx<InitializeBanking>) -> Result<(), ProgramError> {
+        ctx.accounts.initialize_banking()
+    }
+
+    #[instruction]
+    pub fn add(ctx: Ctx<AddMember>) -> Result<(), ProgramError> { 
+        ctx.accounts.add_member()
     }
 }
 

@@ -710,6 +710,7 @@ name = "domestic-banking-program"
 version = "0.1.0"
 dependencies = [
  "quasar-lang",
+ "quasar-spl",
  "quasar-svm",
  "solana-account",
  "solana-address 2.5.0",
@@ -1438,6 +1439,15 @@ dependencies = [
 name = "quasar-schema"
 version = "0.0.0"
 source = "git+https://github.com/blueshift-gg/quasar?branch=master#b0de7db4cd271654a2dcf78807dd865e98e0b339"
+
+[[package]]
+name = "quasar-spl"
+version = "0.0.0"
+source = "git+https://github.com/blueshift-gg/quasar?branch=master#b0de7db4cd271654a2dcf78807dd865e98e0b339"
+dependencies = [
+ "quasar-lang",
+ "solana-address 2.5.0",
+]
 
 [[package]]
 name = "quasar-svm"
