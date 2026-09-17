@@ -25,8 +25,8 @@ impl InitializeBanking {
             &self.payer,
             MintInitParams::Mint {
                 decimals,
-                authority: &crate::ID,
-                freeze_authority: Some(&crate::ID),
+                authority: self.banking.address(),
+                freeze_authority: Some(self.banking.address()),
                 token_program: self.token_program.to_account_view(),
             },
         )?;

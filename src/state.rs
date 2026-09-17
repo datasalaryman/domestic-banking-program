@@ -4,9 +4,9 @@ use quasar_lang::prelude::*;
 #[account(discriminator = 1, set_inner)]
 #[seeds(b"banking", authority: Address)]
 pub struct Banking {
-    pub authority: Address, 
+    pub authority: Address,
     pub currency: Address,
-    pub decimals: u8, 
+    pub decimals: u8,
 }
 
 // Creates a new membership to Banking
@@ -14,10 +14,10 @@ pub struct Banking {
 #[account(discriminator = 2, set_inner)]
 #[seeds(b"member", authority: Address, banking: Address)]
 pub struct Member {
-    pub authority: Address, 
-    pub banking: Address, 
-    pub issuance_limit: u64, 
-    pub period: u64, 
+    pub authority: Address,
+    pub banking: Address,
+    pub issuance_limit: u64,
+    pub period: u64,
     pub until: u64,
-    pub issuance_remaining: u64, 
+    pub issuance_remaining: u64,
 }

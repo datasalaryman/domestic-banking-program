@@ -19,12 +19,18 @@ mod domestic_banking_program {
     }
 
     #[instruction(discriminator = 1)]
-    pub fn add(
-        ctx: Ctx<AddMember>,
-        issuance_limit: u64,
-        period: u64,
-    ) -> Result<(), ProgramError> {
+    pub fn add(ctx: Ctx<AddMember>, issuance_limit: u64, period: u64) -> Result<(), ProgramError> {
         ctx.accounts.add_member(issuance_limit, period)
+    }
+
+    #[instruction(discriminator = 2)]
+    pub fn issue_as_banking(ctx: Ctx<IssueAsBanking>, amount: u64) -> Result<(), ProgramError> {
+        ctx.accounts.issue(amount, &ctx.bumps)
+    }
+
+    #[instruction(discriminator = 3)]
+    pub fn issue_as_member(ctx: Ctx<IssueAsMember>, amount: u64) -> Result<(), ProgramError> {
+        ctx.accounts.issue(amount, &ctx.bumps)
     }
 }
 

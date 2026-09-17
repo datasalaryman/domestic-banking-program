@@ -21,14 +21,10 @@ pub struct AddMember {
 
 impl AddMember {
     #[inline(always)]
-    pub fn add_member(
-        &mut self,
-        issuance_limit: u64,
-        period: u64,
-    ) -> Result<(), ProgramError> {
+    pub fn add_member(&mut self, issuance_limit: u64, period: u64) -> Result<(), ProgramError> {
         let clock = <Clock as quasar_lang::sysvars::Sysvar>::get()?;
-        let current_timestamp = u64::try_from(clock.unix_timestamp.get())
-            .map_err(|_| ProgramError::InvalidArgument)?;
+        let current_timestamp =
+            u64::try_from(clock.unix_timestamp.get()).map_err(|_| ProgramError::InvalidArgument)?;
         let until = current_timestamp
             .checked_add(period)
             .ok_or(ProgramError::InvalidArgument)?;
