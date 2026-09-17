@@ -22,6 +22,8 @@ idl-build = ["quasar-lang/idl-build"]
 quasar-lang = { git = "https://github.com/blueshift-gg/quasar", branch = "master" }
 quasar-spl = { git = "https://github.com/blueshift-gg/quasar", branch = "master" }
 solana-instruction = { version = "3.2.0" }
+# Quasar 0.0 expects zeropod's wincode 0.4 implementation.
+zeropod = { version = "=0.3.3", default-features = false }
 
 [dev-dependencies]
 quasar-svm = { version = "0.1" }

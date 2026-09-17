@@ -19,8 +19,12 @@ mod domestic_banking_program {
     }
 
     #[instruction(discriminator = 1)]
-    pub fn add(ctx: Ctx<AddMember>) -> Result<(), ProgramError> {
-        ctx.accounts.add_member()
+    pub fn add(
+        ctx: Ctx<AddMember>,
+        issuance_limit: u64,
+        period: u64,
+    ) -> Result<(), ProgramError> {
+        ctx.accounts.add_member(issuance_limit, period)
     }
 }
 

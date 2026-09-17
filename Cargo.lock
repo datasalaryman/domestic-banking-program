@@ -716,6 +716,7 @@ dependencies = [
  "solana-address 2.5.0",
  "solana-instruction",
  "solana-pubkey 4.2.0",
+ "zeropod",
 ]
 
 [[package]]
@@ -1431,7 +1432,7 @@ dependencies = [
  "solana-instruction-view",
  "solana-program-error",
  "solana-program-log",
- "wincode 0.4.9",
+ "wincode",
  "zeropod",
 ]
 
@@ -1855,7 +1856,7 @@ dependencies = [
  "solana-program-error",
  "solana-sanitize",
  "solana-sha256-hasher",
- "wincode 0.4.9",
+ "wincode",
 ]
 
 [[package]]
@@ -3019,19 +3020,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "wincode"
-version = "0.5.5"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "66d967db7705dc29120bb6e8ce5b5a2e27734ed5976d1c904e95bd238d1c3c5a"
-dependencies = [
- "pastey",
- "proc-macro2",
- "quote",
- "thiserror 2.0.20",
- "wincode-derive",
-]
-
-[[package]]
 name = "wincode-derive"
 version = "0.4.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3106,21 +3094,21 @@ dependencies = [
 
 [[package]]
 name = "zeropod"
-version = "0.3.6"
+version = "0.3.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9bfb94eeca380859d06cd5ea5e91e1d73c68e739d88595e4ca14a1b262e34184"
+checksum = "efea93c3bd4eaad26f65af88348e5e08077f4a4682adb37147765172100313c4"
 dependencies = [
  "solana-address 2.5.0",
  "solana-program-error",
- "wincode 0.5.5",
+ "wincode",
  "zeropod-derive",
 ]
 
 [[package]]
 name = "zeropod-derive"
-version = "0.3.6"
+version = "0.3.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "347b3f10374e530095add7d59243d9def7034e3eca88a12b794794c917abdeac"
+checksum = "8274ac397f401621161eb645a2bc19b641a81a4f4b4a1e0e4795867fe494f6b1"
 dependencies = [
  "proc-macro2",
  "quote",
