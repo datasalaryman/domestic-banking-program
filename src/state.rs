@@ -6,6 +6,7 @@ use quasar_lang::prelude::*;
 pub struct Banking {
     pub authority: Address, 
     pub currency: Address,
+    pub decimals: u8, 
 }
 
 // Creates a new membership to Banking
