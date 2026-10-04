@@ -7,7 +7,7 @@ mod instructions;
 mod state;
 use instructions::*;
 
-declare_id!("9ZyWG6ZceKcHy9fXRGLDJqZPHNPJtcmQqHAkKVMxidhW");
+declare_id!("DpJ5cwJqDYc9AVNnNhGoVc3rWQ4sF8Lp4cGvNWGJnq6G");
 
 #[program]
 mod domestic_banking_program {
